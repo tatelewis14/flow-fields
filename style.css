@@ -1,0 +1,21 @@
+*{
+}
+body, html {
+    padding: 0;
+    margin:0;
+}
+canvas{
+    z-index: 1;
+    background-color: black;
+    position: relative;
+}
+#values {
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    z-index: 3;
+    color: black;
+    border-bottom-right-radius: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}

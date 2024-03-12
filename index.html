@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+    <title>Particles</title>
+</head>
+<body>
+    <div id="values">
+        <label for="line-amount">Number of Lines:</label>
+        <input type="range" name="line-amount" id="line-amount"min='50' max="4000" value="1000">
+        <p id="line-amount-value">1000</p>
+        <label for="curve"></label>
+        <input type="range" name="curve" id="curve" min="'0.01" max="'20" value="0.5">
+    </div>
+    <canvas id="gc"></canvas>
+</body>
+</html>
