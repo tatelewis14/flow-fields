@@ -66,8 +66,8 @@ showGrid(ctx) {
     for(let c = 0; c<this.cols; c++){
         ctx.beginPath()
         ctx.strokeStyle = 'white';
-        ctx.moveTo(0, this.gridSize*c)
-        ctx.lineTo(this.height, this.gridSize*c)
+        ctx.moveTo(0, this.cellSize*c)
+        ctx.lineTo(this.height, this.cellSize*c)
         ctx.stroke()
     }
     for(let r = 0; r<this.rows; r++){
