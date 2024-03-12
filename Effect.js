@@ -73,8 +73,8 @@ showGrid(ctx) {
     for(let r = 0; r<this.rows; r++){
         ctx.beginPath()
         ctx.strokeStyle = 'white';
-        ctx.moveTo(0, this.gridSize*r)
-        ctx.lineTo(this.width, this.gridSize*r)
+        ctx.moveTo(0, this.cellSize*r)
+        ctx.lineTo(this.width, this.cellSize*r)
         ctx.stroke()
     }
 }
