@@ -44,6 +44,11 @@ export class Effect {
         this.rafId = requestAnimationFrame(animate)
         ctx.clearRect(0,0,this.width, this.height)
         arr.forEach(obj=>{
+        if(obj.history.length > 150) {
+            ctx.save()
+            ctx.strokeStyle = `hsl(${Math.random()*360}, 100%, 50%)`
+            c.restore()
+        } 
         obj.update()
         obj.draw(ctx)
     })
