@@ -46,11 +46,11 @@ export class Effect {
         arr.forEach(obj=>{
         if(obj.history.length > 150) {
             ctx.save()
-            ctx.strokeStyle = `hsl(${Math.random()*360}, 100%, 50%)`
-            c.restore()
+            ctx.strokeStyle = `red`
         } 
         obj.update()
         obj.draw(ctx)
+        ctx.restore()
     })
     }
     animate()
