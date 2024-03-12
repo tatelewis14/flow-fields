@@ -47,10 +47,13 @@ export class Effect {
         if(obj.history.length > 150) {
             ctx.save()
             ctx.strokeStyle = `red`
-        } 
+            obj.update()
+            obj.draw(ctx)
+            ctx.restore()
+        } else {
         obj.update()
         obj.draw(ctx)
-        ctx.restore()
+        }
     })
     }
     animate()
@@ -62,12 +65,14 @@ stop() {
 showGrid(ctx) {
     for(let c = 0; c<this.cols; c++){
         ctx.beginPath()
+        ctx.strokeStyle = 'white';
         ctx.moveTo(0, this.gridSize*c)
         ctx.lineTo(this.height, this.gridSize*c)
         ctx.stroke()
     }
     for(let r = 0; r<this.rows; r++){
         ctx.beginPath()
+        ctx.strokeStyle = 'white';
         ctx.moveTo(0, this.gridSize*r)
         ctx.lineTo(this.width, this.gridSize*r)
         ctx.stroke()
