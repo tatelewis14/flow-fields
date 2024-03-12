@@ -11,7 +11,6 @@ export class Line {
         this.effect = effect;
         this.speedMultiplier = Math.random() * 2;
         this.timer = this.maxLength * 2;
-        this.randomColor = `hsl(${Math.random()*360, 100%, 50%})`
 }
     draw(ctx) {
         ctx.beginPath();
@@ -21,6 +20,7 @@ export class Line {
         }
         ctx.strokeStyle = 'white'
         ctx.lineWidth = this.thickness;
+        ctx.stroke()
     }
     update() {
         this.timer--;
