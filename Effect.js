@@ -54,8 +54,21 @@ export class Effect {
     })
     }
     animate()
+    this.showGrid()
 }
 stop() {
     cancelAnimationFrame(this.rafId)
+}
+showGrid(ctx) {
+    for(let c = 0; c<this.cols; c++){
+        ctx.moveTo(0, this.gridSize*c)
+        ctx.lineTo(this.height, this.gridSize*c)
+        ctx.stroke()
+    }
+    for(let r = 0; r<this.rows; r++){
+        ctx.moveTo(0, this.gridSize*r)
+        ctx.lineTo(this.width, this.gridSize*r)
+        ctx.stroke()
+    }
 }
 }
