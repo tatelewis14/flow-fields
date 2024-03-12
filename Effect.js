@@ -44,7 +44,7 @@ export class Effect {
         this.rafId = requestAnimationFrame(animate)
         ctx.clearRect(0,0,this.width, this.height)
         arr.forEach(obj=>{
-        if(obj.history.length > 150) {
+        if(obj.history.length > 10) {
             ctx.save()
             ctx.strokeStyle = `red`
             obj.update()
