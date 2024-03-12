@@ -54,7 +54,7 @@ export class Effect {
     })
     }
     animate()
-    this.showGrid()
+    this.showGrid(ctx)
 }
 stop() {
     cancelAnimationFrame(this.rafId)
