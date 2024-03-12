@@ -61,11 +61,13 @@ stop() {
 }
 showGrid(ctx) {
     for(let c = 0; c<this.cols; c++){
+        ctx.beginPath()
         ctx.moveTo(0, this.gridSize*c)
         ctx.lineTo(this.height, this.gridSize*c)
         ctx.stroke()
     }
     for(let r = 0; r<this.rows; r++){
+        ctx.beginPath()
         ctx.moveTo(0, this.gridSize*r)
         ctx.lineTo(this.width, this.gridSize*r)
         ctx.stroke()
