@@ -22,9 +22,9 @@ export class Line {
         ctx.strokeStyle = 'white'
         ctx.lineWidth = this.thickness;
         if(this.history.length > 150) {
+            ctx.save()
             ctx.strokeStyle = this.randomColor
-        } else {
-            ctx.strokeStyle='white'
+            ctx.restore()
         }
         ctx.stroke()
     }
