@@ -10,7 +10,8 @@ export class Line {
         this.angle = 0;
         this.effect = effect;
         this.speedMultiplier = Math.random() * 2;
-        this.timer = this.maxLength * 2
+        this.timer = this.maxLength * 2;
+        this.randomColor = `hsl(${Math.random()*360, 100%, 50%})`
 }
     draw(ctx) {
         ctx.beginPath();
@@ -19,7 +20,12 @@ export class Line {
             ctx.lineTo(this.history[i].x, this.history[i].y);
         }
         ctx.strokeStyle = 'white'
-        ctx.lineWidth = this.thickness
+        ctx.lineWidth = this.thickness;
+        if(this.history.length > 150) {
+            ctx.strokeStyle = this.randomColor
+        } else {
+            ctx.strokeStyle='white'
+        }
         ctx.stroke()
     }
     update() {
